@@ -22,8 +22,9 @@ public class Rectangulo {
 	
 	
 	public double  area(){
-			System.out.println("el area es de "+(base*altura));
-		return base*altura;
+		double area = base*altura; 
+			System.out.println("el area es de "+ area);
+		return area;
 	}
 	public double  perimetro(){
 		double perimetro = (2*base)+(2*altura);

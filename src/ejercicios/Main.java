@@ -90,13 +90,19 @@ public class Main {
 		 rec1.area();
 		 rec1.perimetro();
 		 
+		 double area1=rec1.area();
+		 
 		 System.out.println("Rectangulo 2 ");
 		 rec2.mostrar();
 		 rec2.area();
 		 rec2.perimetro();
+		 double area2=rec2.area();
 		 
-		 
-		 
+		 if ( area1>area2) {
+			 System.out.println("el area del primer rectangulo es mayor ");
+		 }else {
+			 System.out.println("el area del segundo rectangulo es mayor ");
+		 }
 		 
 	 }
 	 
