@@ -28,7 +28,7 @@ public class Main {
                     	 ejercicio1();
                          break;
                      case 2:
-                    	 
+                    	 ejercicio2();
                          break;
                      case 3:
                     	 ;
@@ -80,6 +80,25 @@ public class Main {
 		 
 	 }
 	 
+	 
+	 public static void ejercicio2() {
+		 Rectangulo rec1 = new Rectangulo(10,5);
+		 Rectangulo rec2 = new Rectangulo(15,5);
+		 
+		 System.out.println("Rectangulo 1 ");
+		 rec1.mostrar();
+		 rec1.area();
+		 rec1.perimetro();
+		 
+		 System.out.println("Rectangulo 2 ");
+		 rec2.mostrar();
+		 rec2.area();
+		 rec2.perimetro();
+		 
+		 
+		 
+		 
+	 }
 	 
 	 
 }
