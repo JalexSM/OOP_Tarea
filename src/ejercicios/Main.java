@@ -10,14 +10,14 @@ public class Main {
 
          while (opcion != 8) {
         	 System.out.println("\n===== MENÚ PRINCIPAL =====");
-             System.out.println(" 1.");
-             System.out.println(" 2.  ");
-             System.out.println(" 3. ");
-             System.out.println(" 4.	");
-             System.out.println(" 5. ");
-             System.out.println(" 6. ");
-             System.out.println(" 7.	");
-             System.out.println(" 8. ");
+             System.out.println(" 1. Persona ");
+             System.out.println(" 2. Rectángulo ");
+             System.out.println(" 3. Producto");
+             System.out.println(" 4. Cuenta	");
+             System.out.println(" 5. Libro");
+             System.out.println(" 6. Calculadora");
+             System.out.println(" 7.	Fecha");
+             System.out.println(" 8. SALIR");
              System.out.print("Seleccione una opción: ");
              
              try {
@@ -42,15 +42,12 @@ public class Main {
                      break;
                      case 6:
                     	 ejercicio6(); 
-                      	;
                       break;
                      case 7:
-                    	    
-                      	;
+                    	 ejercicio7();  
                       break;
                      case 8:
-                    	    
-                      	;
+                    	    System.out.println("saliendo ... ");
                       break;
                      default:
                          System.out.println("Opción inválida.");
@@ -214,7 +211,27 @@ public class Main {
 	        System.out.println("Suma: " + calculo1.division());
 	 }
 	 
-	 
+	 public static void ejercicio7() {
+
+		    System.out.println("===== VALIDACIÓN DE FECHAS =====");
+
+		    Fecha f1 = new Fecha(10, 5, 2024);
+		    Fecha f2 = new Fecha(32, 8, 2023);
+		    Fecha f3 = new Fecha(15, 13, 2022);
+
+		    Fecha[] fechas = {f1, f2, f3};
+
+		    for (int i = 0; i < fechas.length; i++) {
+		        System.out.print("Fecha " + (i + 1) + ": ");
+		        fechas[i].mostrarFecha();
+
+		        if (fechas[i].esValida()) {
+		            System.out.println("✔ Fecha válida\n");
+		        } else {
+		            System.out.println("❌ Fecha inválida\n");
+		        }
+		    }
+		}
 	 
 	 
 	 
