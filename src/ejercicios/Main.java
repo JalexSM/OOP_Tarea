@@ -31,14 +31,14 @@ public class Main {
                     	 ejercicio2();
                          break;
                      case 3:
-                    	 ;
+                    	 ejercicio3();
+
                          break;
                      case 4:
-                     	;
+                    	 ejercicio4();
                          break;
                      case 5:
-    
-                     	;
+                    	 ejercicio5();
                      break;
                      case 6:
                     	    
@@ -105,6 +105,47 @@ public class Main {
 		 }
 		 
 	 }
-	 
-	 
+	
+	 public static void ejercicio3() {
+
+    Producto p1 = new Producto("001", "Laptop", 5000);
+    Producto p2 = new Producto("002", "Mouse", 150);
+
+    p1.aplicarDescuento(10); // 10%
+    p2.aplicarDescuento(20); // 20%
+
+    p1.mostrarProducto();
+    p2.mostrarProducto();
+    }
+
+
+	 public static void ejercicio4() {
+		 
+	       Cuenta cuenta = new Cuenta("Alexander", 1000);
+
+	        cuenta.mostrarSaldo();
+
+	        
+	        cuenta.depositar(500);
+	        cuenta.retirar(200);
+	        cuenta.retirar(2000); 
+	        cuenta.depositar(-50); 
+
+	        cuenta.mostrarSaldo();
+		 
+		 
+	 }
+
+	 public static void ejercicio5() {
+		 
+	        Libro libro1 = new Libro("El Quijote", "Cervantes", 500);
+	        Libro libro2 = new Libro("Cuentos", "Autor X", 150);
+	        Libro libro3 = new Libro("Java Básico", "Autor Y", 320);
+	        
+	        libro1.mostrarInfo();
+	        libro2.mostrarInfo();
+	        libro3.mostrarInfo();
+	        
+	 }
+
 }
