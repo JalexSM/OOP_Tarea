@@ -41,7 +41,7 @@ public class Main {
                     	 ejercicio5();
                      break;
                      case 6:
-                    	    
+                    	 ejercicio6(); 
                       	;
                       break;
                      case 7:
@@ -59,6 +59,7 @@ public class Main {
                  } catch (Exception e) {
                      System.out.println("Debe ingresar un número válido.");
                      sc.nextLine(); 
+                     sc.nextLine();
                  }
              }
          }
@@ -121,20 +122,61 @@ public class Main {
 
 	 public static void ejercicio4() {
 		 
-	       Cuenta cuenta = new Cuenta("Alexander", 1000);
-
-	        cuenta.mostrarSaldo();
-
-	        
-	        cuenta.depositar(500);
-	        cuenta.retirar(200);
-	        cuenta.retirar(2000); 
-	        cuenta.depositar(-50); 
-
-	        cuenta.mostrarSaldo();
+		 	sc.nextLine();
 		 
-		 
-	 }
+	       System.out.println("===== SISTEMA DE CUENTA =====");
+
+	        System.out.print("Ingrese nombre del titular: ");
+	        String nombre = sc.nextLine();
+
+	        System.out.print("Ingrese saldo inicial: ");
+	        double saldoInicial = sc.nextDouble();
+
+	        Cuenta cuenta1 = new Cuenta(nombre, saldoInicial);
+
+	        int opcion;
+
+	        do {
+	            System.out.println("\n===== MENÚ =====");
+	            System.out.println("1. Depositar");
+	            System.out.println("2. Retirar");
+	            System.out.println("3. Mostrar datos");
+	            System.out.println("4. Salir");
+	            System.out.print("Seleccione una opción: ");
+
+	            opcion = sc.nextInt();
+
+	            switch (opcion) {
+	                case 1:
+	                    System.out.print("Ingrese monto a depositar: ");
+	                    double deposito = sc.nextDouble();
+	                    cuenta1.depositar(deposito);
+	                    break;
+
+	                case 2:
+	                    System.out.print("Ingrese monto a retirar: ");
+	                    double retiro = sc.nextDouble();
+	                    cuenta1.retirar(retiro);
+	                    break;
+
+	                case 3:
+	                    System.out.println("\n--- DATOS DE LA CUENTA ---");
+	                    System.out.println("Titular: " + cuenta1.getTitular());
+	                    System.out.println("Saldo actual: Q" + cuenta1.getSaldo());
+	                    break;
+
+	                case 4:
+	                    System.out.println("Saliendo del sistema...");
+	                    break;
+
+	                default:
+	                    System.out.println("Opción inválida.");
+	            }
+
+	        } while (opcion != 4);
+
+	    }
+	 
 
 	 public static void ejercicio5() {
 		 
@@ -147,5 +189,40 @@ public class Main {
 	        libro3.mostrarInfo();
 	        
 	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 public static void ejercicio6() {
+		 
+	       System.out.println("===== Calculadora =====");
+
+	        System.out.print("Ingrese el primer numero: ");
+	        double num1 = sc.nextDouble();
+
+	        System.out.print("Ingrese el segundo numero: ");
+	        double num2 = sc.nextDouble();
+
+	        Calculadora calculo1 = new Calculadora(num1, num2);
+		 
+	        
+	        System.out.println("Suma: " + calculo1.suma());
+	        System.out.println("Suma: " + calculo1.resta());
+	        System.out.println("Suma: " + calculo1.multiplicacion());
+	        System.out.println("Suma: " + calculo1.division());
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 
 }

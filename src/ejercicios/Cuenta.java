@@ -11,9 +11,36 @@ public class Cuenta {
         this.titular = titular;
         this.saldo = saldoInicial;
     }
+    
+    
+    public String getTitular() {
+		return titular;
+	}
 
 
-    public void depositar(double monto) {
+
+
+
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+
+
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+
+
+
+
+	public void depositar(double monto) {
         if (monto > 0) {
             saldo += monto;
             System.out.println("Depósito de Q" + monto + " realizado.");
